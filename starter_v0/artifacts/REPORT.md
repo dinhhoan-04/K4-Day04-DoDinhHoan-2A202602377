@@ -169,15 +169,15 @@ Nhóm `KX-DAY04-DoDinhHoan` đã hoàn thành 100% mục tiêu của bài Lab 04
 - **Điều tôi học được từ phần việc này:** Tầm quan trọng của việc xây dựng bộ benchmark thử thách thực tế thay vì chỉ dùng các câu hỏi đơn giản.
 - **Nếu làm lại, tôi sẽ cải thiện điều gì:** Thêm các case tấn công lừa đảo qua câu hỏi gián tiếp phức tạp hơn.
 
-### Việt Hoàng — MSSV: 2A202602380
+### Việt Hoàng — MSSV: 2A202602398
 - **Vai trò/phần việc được nhận:** UI & Documentation Lead.
-- **Những gì tôi đã thay đổi trong repo chung:** Phát triển ứng dụng Streamlit Live Chat `app.py`, tổng hợp nội dung báo cáo `REPORT.md` và chuẩn bị các kịch bản demo.
-- **File hoặc artifact liên quan:** `app.py`, `artifacts/REPORT.md`.
-- **Commit hash hoặc pull request:** `commit f1a2b3c` ("feat: implement Streamlit live chat UI and complete final report").
-- **Một quyết định kỹ thuật tôi đã đưa ra và lý do:** Tái sử dụng nguyên vẹn hàm `run_model_tool_loop` từ `chat.py` trong Streamlit UI để đảm bảo tính nhất quán giữa CLI, Eval và UI.
-- **Khó khăn tôi gặp và cách tôi xử lý:** Hiển thị chi tiết tool calls và result dưới dạng expander mà không làm rối luồng chat của người dùng.
-- **Điều tôi học được từ phần việc này:** Kỹ năng xây dựng giao diện minh bạch (Transparent AI UI) giúp người dùng tin tưởng vào các quyết định gọi tool của Agent.
-- **Nếu làm lại, tôi sẽ cải thiện điều gì:** Thêm tính năng xuất transcript cuộc hội thoại ra file PDF/Markdown ngay trên UI.
+- **Những gì tôi đã thay đổi trong repo chung:** Xây dựng lại từ đầu ứng dụng Streamlit Live Chat `app.py` (bản làm việc trước đó nằm trên máy của thành viên khác nên không có commit đứng tên tôi, nên tôi build lại toàn bộ dưới Git identity của chính mình); cập nhật phần self-reflection cá nhân trong `REPORT.md`.
+- **File hoặc artifact liên quan:** `app.py`, `artifacts/REPORT.md` (chỉ phần self-reflection của tôi).
+- **Commit hash hoặc pull request:** _(điền sau khi commit dưới đúng Git identity của tôi trên repo chung)._
+- **Một quyết định kỹ thuật tôi đã đưa ra và lý do:** Tái sử dụng nguyên vẹn hàm `run_model_tool_loop` và `write_transcript` từ `chat.py` trong Streamlit UI để CLI, eval run và UI dùng chung một agent loop và cùng ghi transcript theo định dạng thống nhất. Thêm nút "Start new conversation" và session stats (số tool call, số lỗi) ở sidebar để dễ theo dõi khi demo.
+- **Khó khăn tôi gặp và cách tôi xử lý:** Bản UI trước đó có import `write_transcript` nhưng không thực sự gọi để lưu transcript; tôi bổ sung việc ghi transcript sau mỗi turn để UI cũng tạo được evidence như CLI. Cũng cần tách rõ args/result của từng tool call trong expander để dễ audit mà không làm rối luồng chat.
+- **Điều tôi học được từ phần việc này:** Một UI minh bạch (hiển thị đúng tool call, args, result, error, artifact hash) quan trọng hơn giao diện đẹp — đúng như `LAB-GUIDE.md` đã lưu ý. Ngoài ra, phải luôn chạy `git log` để xác nhận commit thật sự đứng tên mình trên đúng branch nộp bài, không chỉ tin vào việc đã "code xong".
+- **Nếu làm lại, tôi sẽ cải thiện điều gì:** Thêm tính năng xuất transcript cuộc hội thoại ra Markdown ngay trên UI, và viết test smoke cho `app.py` (ví dụ kiểm tra `run_model_tool_loop` được gọi đúng tham số) thay vì chỉ compile-check thủ công.
 
 ## C3. Final checkout
 
