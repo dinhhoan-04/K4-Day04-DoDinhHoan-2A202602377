@@ -5,7 +5,7 @@
 - **Team:** `KX-DAY04-DoDinhHoan`
 - **Members:**
   1. Đỗ Đình Hoàn — MSSV: `2A202602377` (Nhóm trưởng / Prompt Lead & Tool Schema Engineer)
-  2. Nguyễn Khắc Giáp — MSSV: `2A202602378` (Tool Developer & Integration Engineer)
+  2. Nguyễn Khắc Giáp — MSSV: `2A202602950` (Tool Developer & Integration Engineer)
   3. Cao Văn Cường — MSSV: `2A202602379` (Eval & Red-Team Security Lead)
   4. Việt Hoàng — MSSV: `2A202602380` (UI & Documentation Lead)
 - **Provider/model:** OpenRouter / `gemini-3.5-flash`
